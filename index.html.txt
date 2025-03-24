@@ -1,0 +1,47 @@
+<div class="museum">
+    <div class="decor-top"></div>
+    <div class="header">
+        <img src="https://www.pngall.com/wp-content/uploads/2016/04/Scroll-PNG-Clipart.png" alt="Scroll" class="scroll-img">
+        <h1 id="title">垃圾代幣博物館</h1>
+        <select id="language" onchange="changeLanguage()">
+            <option value="zh">繁體中文</option>
+            <option value="en">English</option>
+        </select>
+        <p id="subtitle">在此殿堂，定制並交易汝之“至廢珍寶”</p>
+    </div>
+    
+    <div class="nav">
+        <button onclick="showSection('create')" id="nav-create">鑄造廢幣</button>
+        <button onclick="showSection('market')" id="nav-market">廢幣集市</button>
+        <button onclick="showSection('hall')" id="nav-hall">代幣大廳</button>
+    </div>
+
+    <div class="create-section" id="create-section">
+        <h2 id="create-title">鑄造廢幣</h2>
+        <input id="tokenName" placeholder="代幣名稱（例：廢紙幣）">
+        <textarea id="tokenDesc" placeholder="描述（例：一文不值）"></textarea>
+        <button onclick="createToken()" id="create-btn">入館珍藏</button>
+    </div>
+
+    <div class="market-section" id="market-section" style="display: none;">
+        <h2 id="market-title">廢幣集市</h2>
+        <div id="market"></div>
+    </div>
+
+    <div class="hall-section" id="hall-section" style="display: none;">
+        <h2 id="hall-title">代幣大廳</h2>
+        <div class="hall-tabs">
+            <button onclick="showHallTab('my-tokens')" id="my-tokens-tab">我的藏品</button>
+            <button onclick="showHallTab('all-tokens')" id="all-tokens-tab">公共展廳</button>
+        </div>
+        <div id="my-tokens" class="hall-tab"></div>
+        <div id="all-tokens" class="hall-tab" style="display: none;"></div>
+    </div>
+
+    <div class="decor-bottom"></div>
+    
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="toggleMusic()" id="music-btn">音樂開/關</button>
+</div>
